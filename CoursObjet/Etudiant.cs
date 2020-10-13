@@ -10,6 +10,6 @@ namespace ConsoleApp4 {
         public int NbMatieres;
         public int NbEnfants;
 
-        public List<Matiere> Matieres { get ;set;}
+        public List<Matiere> Matieres { get; set; }
     }
 }
