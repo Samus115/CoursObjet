@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Services\EtudiantsService.cs~RFf616f27.TMP" />
+  </ItemGroup>
+
 </Project>

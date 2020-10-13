@@ -8,8 +8,9 @@ namespace ConsoleApp4 {
 
 
         private static DemandeALutilisateur _DemandeALutilisateur = new DemandeALutilisateur();
-        private static EtudiantsService _EtudiantsService = new EtudiantsService(_DemandeALutilisateur);
         private static MatieresService _MatieresService = new MatieresService(_DemandeALutilisateur);
+        private static EtudiantsService _EtudiantsService = new EtudiantsService(_DemandeALutilisateur, _MatieresService);
+    
         static void Main(string[] args) {
             //// présentaiton du fonctionnement du lien entre les objets
             //Matiere CsharpNiveau1 = new Matiere();

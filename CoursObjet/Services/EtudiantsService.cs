@@ -56,8 +56,13 @@ namespace ConsoleApp4.Services {
             // demande des autres informations
             p.Age = _DemandeALutilisateur.DemandeEntier("Bonjour, quel âge as-tu ?");
             p.NbMatieres = _DemandeALutilisateur.DemandeEntier("Combien de mmatières suis-tu ?");
-            _MatieresService.DemandeMatiere(p);
-
+            p.Matieres = new List<Matiere>();
+            for(int i = 0; i<p.NbMatieres; i++)
+            {
+                Matiere m = _MatieresService.DemandeMatiere();
+                p.Matieres.Add(m);
+            }
+                     
             // Exercice : demander la liste des matières associé à l'étudiant
             // 1. Demander la première matière (on s'arrête à 1)
             // 2. On en demande tant qu'il en a
